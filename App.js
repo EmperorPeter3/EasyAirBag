@@ -1,39 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import * as React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
+import * as pages from './containers'
 
-export default class App extends React.Component {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    position: 'relative',
+  },
+})
+
+
+class App extends React.Component {
   state = {
-    page: 0,
+    page: 'Main',
   }
 
   onPress = (page) => this.setState({ page })
 
   renderPage = () => {
     const { page } = this.state
-    switch (page) {
-      case 0:
-        return (
-          <View>
-            <Text>This is main page</Text>
-            <Button
-              onPress={() => this.onPress(1)}
-              title="Go to next page"
-              color="green"
-            />
-          </View>
-        )
-      case 1:
-        return (
-          <View>
-            <Text>This is second page</Text>
-            <Button
-              onPress={() => this.onPress(0)}
-              title="Go to start page"
-              color="blue"
-            />
-          </View>
-        )
-    }
+  
+    if (!pages[page]) return null // TO DO: 404 not found
+
+    const Container = pages[page]
+
+    return <Container onChangePage={this.onPress} />
   }
 
   render() {
@@ -47,11 +39,4 @@ export default class App extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
+export default App
