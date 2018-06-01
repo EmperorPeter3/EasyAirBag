@@ -13,19 +13,22 @@ const styles = StyleSheet.create({
 
 class App extends React.Component {
   state = {
-    page: 'Main',
+    page: 'Carriage',
+    pageProps: {},
   }
 
   onPress = (page) => this.setState({ page })
 
+  onSetPageProps = (pageProps) => this.setState({ pageProps })
+
   renderPage = () => {
-    const { page } = this.state
+    const { page, pageProps } = this.state
   
     if (!pages[page]) return null // TO DO: 404 not found
 
     const Container = pages[page]
 
-    return <Container onChangePage={this.onPress} />
+    return <Container onChangePage={this.onPress} onSetPageProps={this.onSetPageProps} {...pageProps} />
   }
 
   render() {
