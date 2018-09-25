@@ -30,13 +30,21 @@ export default {
     color: '#000',
     fontSize: 18,
     fontWeight: '500',
+    marginBottom: 24,
   },
   text: {
     paddingTop: 10,
     color: '#878787',
   },
+  labelText: {
+    color: '#777',
+  },
   flexRow: {
     display: 'flex',
     flexDirection: 'row',
+  },
+  flexColumn: {
+    display: 'flex',
+    flexDirection: 'column',
   },
 }

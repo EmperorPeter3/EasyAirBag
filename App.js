@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
 class App extends React.Component {
   state = {
-    page: 'Carriage',
+    page: 'Main',
     pageProps: {},
   }
 

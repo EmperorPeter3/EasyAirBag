@@ -52,11 +52,22 @@ class CarriageRequest extends React.Component {
         <View style={styles.container}>
           <Text style={styles.infoText}>Информация о рейсе</Text>
           <View style={styles.flexRow}>
-            <TextInput
-              style={{ height: 40, width: 100, borderColor: 'gray', borderWidth: 1 }}
-              onChangeText={(flightNumber) => this.setState({ flightNumber })}
-              value={this.state.flightNumber}
-            />
+            <View style={styles.flexColumn}>
+              <Text style={styles.labelText}>Рейс #</Text>
+              <TextInput
+                style={{ height: 40, width: 100, borderColor: 'gray', borderWidth: 1 }}
+                onChangeText={(flightNumber) => this.setState({ flightNumber })}
+                value={this.state.flightNumber}
+              />
+            </View>
+            <View style={{ ...styles.flexColumn, marginLeft: 16 }}>
+              <Text style={styles.labelText}>Дата вылета</Text>
+              <TextInput
+                style={{ height: 40, width: 100, borderColor: 'gray', borderWidth: 1 }}
+                onChangeText={(flightDate) => this.setState({ flightDate })}
+                value={this.state.flightDate}
+              />
+            </View>
           </View>
         </View>
       </View>
