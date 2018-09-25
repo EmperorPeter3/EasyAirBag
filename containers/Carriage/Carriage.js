@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View, Image, Button, FlatList } from 'react-native'
+import { StyleSheet, Text, View, FlatList } from 'react-native'
 import styles from './styles'
 import data from './data'
 import { Button as CustomButton } from '../../components'
@@ -89,7 +89,7 @@ class Carriage extends React.PureComponent {
             title='Перевезти багаж'
             imageSrc={require('../../assets/img/arrow_down.png')}
             styles={styles.carriageBtn}
-            onPress={() => onChangePage('NewCarriageRequest')}
+            onPress={() => onChangePage('CarriageRequest')}
           />
         </View>
       </View>

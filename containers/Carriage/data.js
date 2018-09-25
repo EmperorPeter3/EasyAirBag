@@ -16,6 +16,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '62TR2E',
@@ -29,6 +31,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '63TR2E',
@@ -42,6 +46,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '64TR2E',
@@ -55,6 +61,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '65TR2E',
@@ -68,6 +76,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '66TR2E',
@@ -81,6 +91,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '67TR2E',
@@ -94,6 +106,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '68TR2E',
@@ -107,6 +121,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '69TR2E',
@@ -120,6 +136,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '60TR2E',
@@ -133,6 +151,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
     {
       flightNumber: '71TR2E',
@@ -146,6 +166,8 @@ export default {
         email: 'alexei@gmail.com',
         skype: 'aleksei_1990',
       },
+      description: 'Сумка небольшая, аккуратная. Внутри рыба и мясо.',
+      sumToPay: 3000,
     },
   ],
 }
