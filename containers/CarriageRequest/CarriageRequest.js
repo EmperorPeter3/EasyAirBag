@@ -25,10 +25,10 @@ class CarriageRequest extends React.Component {
     }
   }
 
-  onSubmit = (senderData) => {
+  onSubmitRequest = () => {
     const { onChangePage, onSetPageProps } = this.props
-    onSetPageProps(senderData)
-    onChangePage('SenderRequest')
+    onSetPageProps(this.state)
+    onChangePage('CarriageOffers')
   }
 
   render() {
@@ -140,6 +140,18 @@ class CarriageRequest extends React.Component {
               value={this.state.skype}
             />
           </View>
+        </View>
+        <View style={styles.container}>
+          <CustomButton
+            title='Разместить заявку'
+            styles={styles.offerBtn}
+            onPress={this.onSubmitRequest}
+          />
+          <CustomButton
+            title='Посмотреть список предложений'
+            styles={styles.backBtn}
+            onPress={() => onChangePage('Carriage')}
+          />
         </View>
       </ScrollView>
     )

@@ -53,4 +53,42 @@ export default {
     display: 'flex',
     flexDirection: 'column',
   },
+  offerBtn: {
+    container: {},
+    view: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#efc218',
+      borderRadius: 50,
+      height: 60,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    text: {
+      color: '#000',
+      fontWeight: '500',
+      fontSize: 18,
+    },
+  },
+  backBtn: {
+    container: {},
+    view: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: 50,
+      height: 60,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    text: {
+      color: '#000',
+      fontWeight: '500',
+      fontSize: 18,
+    },
+  },
 }
