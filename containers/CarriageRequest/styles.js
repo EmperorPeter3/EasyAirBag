@@ -2,17 +2,23 @@ export default {
   carriageRequest: {
     flex: 1,
     flexDirection: 'column',
+    marginBottom: 30,
   },
   navbar: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-end',
     justifyContent: 'flex-start',
-    height: '12%',
+    height: 90,
     paddingLeft: '5%',
     paddingBottom: '3%',
     zIndex: 1,
     backgroundColor: '#efc218',
+  },
+  headerText: {
+    color: '#000',
+    fontSize: 18,
+    fontWeight: '500',
   },
   burgerStyles: {
     view: {},

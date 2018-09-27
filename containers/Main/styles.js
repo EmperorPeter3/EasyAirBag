@@ -25,7 +25,7 @@ export default {
     flexDirection: 'row',
     alignItems: 'flex-end',
     justifyContent: 'flex-start',
-    height: '12%',
+    height: 90,
     paddingLeft: '5%',
     paddingBottom: '3%',
     zIndex: 1,

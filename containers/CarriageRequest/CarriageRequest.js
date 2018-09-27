@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View, TextInput } from 'react-native'
+import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native'
 import styles from './styles'
 import { Button as CustomButton } from '../../components'
 
@@ -13,7 +13,7 @@ class CarriageRequest extends React.Component {
       flightNumber: '',
       flightDate: '',
       ticketPhoto: null,
-      weight: 0,
+      weight: '',
       description: '',
       bagPhoto: null,
       firstName: '',
@@ -35,7 +35,7 @@ class CarriageRequest extends React.Component {
     const { onChangePage } = this.props
 
     return (
-      <View style={styles.carriageRequest}>
+      <ScrollView style={styles.carriageRequest}>
         <View style={styles.navbar}>
           <CustomButton
             title='burger'
@@ -69,8 +69,79 @@ class CarriageRequest extends React.Component {
               />
             </View>
           </View>
+          <View style={styles.flexColumn}>
+            <Text style={styles.labelText}>Фотография билета</Text>
+            {/* <WebView source={'./fileuploader.html'} /> */}
+          </View>
         </View>
-      </View>
+        <View style={styles.container}>
+          <Text style={styles.infoText}>Информация о багаже, который вы готовы перевезти</Text>
+          <View style={styles.flexColumn}>
+            <Text style={styles.labelText}>Вес багажа, кг</Text>
+            <TextInput
+              style={{ height: 40, width: 70, borderColor: 'gray', borderWidth: 1 }}
+              onChangeText={(weight) => this.setState({ weight })}
+              value={this.state.weight}
+            />
+          </View>
+          <View style={styles.flexColumn}>
+            <Text style={styles.labelText}>Опишите какой багаж вы готовы взять</Text>
+            <TextInput
+              multiline={true}
+              numberOfLines={4}
+              style={{ borderColor: 'gray', borderWidth: 1 }}
+              onChangeText={(description) => this.setState({ description })}
+              value={this.state.description}
+            />
+            {/* на макете тут можно загрузить фотографию багажа --- но это не логично, какого? который собираешься перевезти? */}
+          </View>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.infoText}>Персональная информация</Text>
+          <View style={styles.flexRow}>
+            <View style={styles.flexColumn}>
+              <Text style={styles.labelText}>Имя</Text>
+              <TextInput
+                style={{ height: 40, width: 150, borderColor: 'gray', borderWidth: 1 }}
+                onChangeText={(firstName) => this.setState({ firstName })}
+                value={this.state.firstName}
+              />
+            </View>
+            <View style={{ ...styles.flexColumn, marginLeft: 16 }}>
+              <Text style={styles.labelText}>Фамилия</Text>
+              <TextInput
+                style={{ height: 40, width: 150, borderColor: 'gray', borderWidth: 1 }}
+                onChangeText={(secondName) => this.setState({ secondName })}
+                value={this.state.secondName}
+              />
+            </View>
+          </View>
+          <View style={{ ...styles.flexColumn, marginTop: 16 }}>
+            <Text style={styles.labelText}>Телефон</Text>
+            <TextInput
+              style={{ height: 40, width: 200, borderColor: 'gray', borderWidth: 1 }}
+              onChangeText={(phone) => this.setState({ phone })}
+              value={this.state.phone}
+            />
+          </View>
+          <View style={{ ...styles.flexColumn, marginTop: 16 }}>
+            <Text style={styles.labelText}>E-mail</Text>
+            <TextInput
+              style={{ height: 40, width: 200, borderColor: 'gray', borderWidth: 1 }}
+              onChangeText={(email) => this.setState({ email })}
+              value={this.state.email}
+            />
+          </View>
+          <View style={{ ...styles.flexColumn, marginTop: 16 }}>
+            <Text style={styles.labelText}>Skype</Text>
+            <TextInput
+              style={{ height: 40, width: 200, borderColor: 'gray', borderWidth: 1 }}
+              onChangeText={(skype) => this.setState({ skype })}
+              value={this.state.skype}
+            />
+          </View>
+        </View>
+      </ScrollView>
     )
   }
 }
